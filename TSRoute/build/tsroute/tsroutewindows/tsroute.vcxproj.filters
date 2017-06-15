@@ -16,6 +16,9 @@
     <Filter Include="Source Files\windows">
       <UniqueIdentifier>{9a5edbfb-48b5-40e4-88b7-9082b0e84e0c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\windows">
+      <UniqueIdentifier>{17743365-edc3-4940-8149-473cf573c8c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\tsroute.cpp">
@@ -27,6 +30,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\pal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\windows\targetver.h">
+      <Filter>Header Files\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\pal_types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

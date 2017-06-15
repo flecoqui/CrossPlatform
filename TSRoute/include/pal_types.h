@@ -8,13 +8,24 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //
 //*********************************************************
-#ifndef TARGETVER_H
-#define TARGETVER_H 1
-#define WIN32_LEAN_AND_MEAN		// Exclude rarely-used stuff from Windows headers
-#define _WIN32_WINNT 0x0601 // Target Windows 7
-#include <SDKDDKVer.h>
-#include <windows.h>
+#ifndef PAL_TYPES_H
+#define PAL_TYPES_H 1
 
-#include <stdio.h>
-#include <tchar.h>
+typedef unsigned long PAL_DWORD;
+typedef void PAL_VOID;
+typedef void* PAL_HANDLE;
+typedef int PAL_INT;
+typedef const char* PAL_CSTR;
+#if defined (__WINDOWS__) 
+#define PAL_STDAPI __stdcall 
+#elif defined (__LINUX__) 
+#define PAL_STDAPI 
+#else
+#define PAL_STDAPI 
 #endif
+
+typedef PAL_DWORD(PAL_STDAPI *PAL_ROUTINE)(
+	PAL_VOID* lp
+	);
+#endif
+

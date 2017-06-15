@@ -8,15 +8,19 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //
 //*********************************************************
-
+#include <pal.h>
 #include <cstdio>
 #include <iostream>
 #include <string>
-#include <pal.h>
+
 int main(void)
 {
 	std::cout << "hello world" << std::endl;
 	printf("Hello World\r\n");
 	pal_print("Hello World\r\n");
+	pal_print("Wait 1000ms\r\n");
+	pal_sleep(1000);
+	pal_print("Wait done\r\n");
+	// CreateThread(NULL,0,)
 	return 0;
 }
