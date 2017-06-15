@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tsroutewindows", "tsroutewindows\tsroute.vcxproj", "{EDA4069E-CEAB-44A8-B14F-69FFEF627C4B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tsroutelinux", "tsroutelinux\tsroutelinux.vcxproj", "{BF578588-7EFB-49A0-8190-CA0B002DAE3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDA4069E-CEAB-44A8-B14F-69FFEF627C4B}.Debug|ARM.ActiveCfg = Debug|Win32
+		{EDA4069E-CEAB-44A8-B14F-69FFEF627C4B}.Debug|x64.ActiveCfg = Debug|x64
+		{EDA4069E-CEAB-44A8-B14F-69FFEF627C4B}.Debug|x64.Build.0 = Debug|x64
+		{EDA4069E-CEAB-44A8-B14F-69FFEF627C4B}.Debug|x86.ActiveCfg = Debug|Win32
+		{EDA4069E-CEAB-44A8-B14F-69FFEF627C4B}.Debug|x86.Build.0 = Debug|Win32
+		{EDA4069E-CEAB-44A8-B14F-69FFEF627C4B}.Release|ARM.ActiveCfg = Release|Win32
+		{EDA4069E-CEAB-44A8-B14F-69FFEF627C4B}.Release|x64.ActiveCfg = Release|x64
+		{EDA4069E-CEAB-44A8-B14F-69FFEF627C4B}.Release|x64.Build.0 = Release|x64
+		{EDA4069E-CEAB-44A8-B14F-69FFEF627C4B}.Release|x86.ActiveCfg = Release|Win32
+		{EDA4069E-CEAB-44A8-B14F-69FFEF627C4B}.Release|x86.Build.0 = Release|Win32
+		{BF578588-7EFB-49A0-8190-CA0B002DAE3E}.Debug|ARM.ActiveCfg = Debug|ARM
+		{BF578588-7EFB-49A0-8190-CA0B002DAE3E}.Debug|ARM.Build.0 = Debug|ARM
+		{BF578588-7EFB-49A0-8190-CA0B002DAE3E}.Debug|x64.ActiveCfg = Debug|x64
+		{BF578588-7EFB-49A0-8190-CA0B002DAE3E}.Debug|x64.Build.0 = Debug|x64
+		{BF578588-7EFB-49A0-8190-CA0B002DAE3E}.Debug|x86.ActiveCfg = Debug|x86
+		{BF578588-7EFB-49A0-8190-CA0B002DAE3E}.Debug|x86.Build.0 = Debug|x86
+		{BF578588-7EFB-49A0-8190-CA0B002DAE3E}.Release|ARM.ActiveCfg = Release|ARM
+		{BF578588-7EFB-49A0-8190-CA0B002DAE3E}.Release|ARM.Build.0 = Release|ARM
+		{BF578588-7EFB-49A0-8190-CA0B002DAE3E}.Release|x64.ActiveCfg = Release|x64
+		{BF578588-7EFB-49A0-8190-CA0B002DAE3E}.Release|x64.Build.0 = Release|x64
+		{BF578588-7EFB-49A0-8190-CA0B002DAE3E}.Release|x86.ActiveCfg = Release|x86
+		{BF578588-7EFB-49A0-8190-CA0B002DAE3E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
