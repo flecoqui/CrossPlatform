@@ -35,6 +35,8 @@
 PAL_API PAL_INT  pal_print(PAL_CSTR p);
 PAL_API PAL_VOID pal_sleep(PAL_DWORD durationms);
 PAL_API PAL_HANDLE pal_createthread(PAL_ROUTINE proutine, PAL_VOID* pparamter, PAL_DWORD* pid);
+PAL_API PAL_LONGLONG pal_gettickcount();
+PAL_API PAL_INT pal_gettickcountstring(PAL_STR p, int size);
 
 #endif
 

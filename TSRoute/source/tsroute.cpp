@@ -15,12 +15,18 @@
 
 int main(void)
 {
+	char timebuffer[30];
 	std::cout << "hello world" << std::endl;
 	printf("Hello World\r\n");
 	pal_print("Hello World\r\n");
-	pal_print("Wait 1000ms\r\n");
+	pal_print("Wait 1000ms at ");
+	if(pal_gettickcountstring(&timebuffer[0], sizeof(timebuffer))>0)
+		pal_print(timebuffer);
+	pal_print("\r\n");
 	pal_sleep(1000);
-	pal_print("Wait done\r\n");
-	// CreateThread(NULL,0,)
+	pal_print("Wait done at ");
+	if (pal_gettickcountstring(&timebuffer[0], sizeof(timebuffer))>0)
+		pal_print(timebuffer);
+	pal_print("\r\n");
 	return 0;
 }

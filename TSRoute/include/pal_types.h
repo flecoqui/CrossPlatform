@@ -16,12 +16,16 @@ typedef void PAL_VOID;
 typedef void* PAL_HANDLE;
 typedef int PAL_INT;
 typedef const char* PAL_CSTR;
+typedef char* PAL_STR;
 #if defined (__WINDOWS__) 
 #define PAL_STDAPI __stdcall 
+typedef  __int64 PAL_LONGLONG;
 #elif defined (__LINUX__) 
 #define PAL_STDAPI 
+typedef  long long PAL_LONGLONG;
 #else
 #define PAL_STDAPI 
+typedef long long PAL_LONGLONG ;
 #endif
 
 typedef PAL_DWORD(PAL_STDAPI *PAL_ROUTINE)(
