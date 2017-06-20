@@ -26,7 +26,7 @@ PAL_API PAL_VOID pal_sleep(PAL_DWORD durationms)
 }
 PAL_API PAL_HANDLE pal_createthread(PAL_ROUTINE proutine, PAL_VOID* pparamter, PAL_DWORD* pid)
 {
-	return 0;
+	return CreateThread(NULL, 0, proutine, pparamter, 0, pid);
 }
 PAL_API PAL_LONGLONG pal_gettickcount()
 {
@@ -47,7 +47,7 @@ PAL_API PAL_INT pal_gettickcountstring(PAL_STR p, int size)
 	strftime(buf, 30, "%Y/%m/%d %H:%M:%S", &tmbuf);
 	strcat_s(buf, ".");
 	int ms = ts.tv_nsec / 1000000;
-	sprintf_s(usec_buf, "%d", ms);
+	sprintf_s(usec_buf, "%03d", ms);
 	strcat_s(buf, usec_buf);
 	if ((l = (int)strlen(buf)) < size)
 	{

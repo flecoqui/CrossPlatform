@@ -6,4 +6,4 @@ if [ ! -d ../Releases/linuxx64 ]; then
 mkdir ../Releases/linuxx64
 fi
 
-g++ -I./../include -I./../include/linux -o ./../Releases/linuxx64/tsroute ./../source/tsroute.cpp ./../source/linux/pal.cpp 
+g++ -lpthread  -pthread -I./../include -I./../include/linux -o ./../Releases/linuxx64/tsroute ./../source/tsroute.cpp ./../source/linux/pal.cpp 

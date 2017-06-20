@@ -12,7 +12,7 @@
 #define TARGETVER_H 1
 #define WIN32_LEAN_AND_MEAN		// Exclude rarely-used stuff from Windows headers
 #define _WIN32_WINNT 0x0601 // Target Windows 7
-#include <SDKDDKVer.h>
+#include <sdkddkver.h>
 #include <windows.h>
 
 #include <stdio.h>

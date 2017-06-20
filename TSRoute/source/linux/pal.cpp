@@ -9,13 +9,26 @@
 //
 //*********************************************************
 #include <pal.h>
-#include <cstdio>
-#include <time.h>
-#include <string.h>
+//#include <stdlib.h>
+//#include <cstdio>
+//#include <time.h>
+//#include <string.h>
+//#include <pthread.h>
+//#include <unistd.h>
+//#include <errno.h>
+//#include <ctype.h>
+//#include <stdio.h>
 
+#include <pthread.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <errno.h>
+#include <ctype.h>
 PAL_API PAL_INT pal_print(PAL_CSTR p)
 {
-	puts(p);
+	printf("%s",p);
 	return 0;
 }
 PAL_API PAL_VOID pal_sleep(PAL_DWORD durationms)
@@ -28,7 +41,17 @@ PAL_API PAL_VOID pal_sleep(PAL_DWORD durationms)
 }
 PAL_API PAL_HANDLE pal_createthread(PAL_ROUTINE proutine, PAL_VOID* pparamter, PAL_DWORD* pid)
 {
-	return 0;
+	PAL_HANDLE result = NULL;
+	int err = pthread_create(pid, NULL, (void* (*)(void*))proutine, pparamter);
+	if(err != 0)
+	{
+		pal_print("create thread error \n");
+	}
+	else
+	{
+		result = (PAL_HANDLE)pid;
+	}
+	return result;
 }
 PAL_API PAL_LONGLONG pal_gettickcount()
 {
@@ -49,7 +72,7 @@ PAL_API PAL_INT pal_gettickcountstring(PAL_STR p, int size)
 	strftime(buf, 30, "%Y/%m/%d %H:%M:%S", tm);
 	strcat(buf, ".");
 	int ms = (int) ts.tv_nsec / 1000000;
-	sprintf(usec_buf, "%d", ms);
+	sprintf(usec_buf, "%03d", ms);
 	strcat(buf, usec_buf);
 	if ((l = (int) strlen(buf)) < size)
 	{
